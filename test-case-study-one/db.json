@@ -1,0 +1,25 @@
+{
+  "posts": [
+    {
+      "id": 1,
+      "title": "json-server",
+      "author": "typicode"
+    },
+    {
+      "password": "siva@1998",
+      "name": "sivaraman k",
+      "creditcardno": "4157665174204561",
+      "creditcardmonth": "12",
+      "creditcardyear": "2023",
+      "age": "25",
+      "id": 2
+    }
+  ],
+  "userLoginDetails": [
+    {
+      "user_Id": 25600,
+      "password": "siva@1998",
+      "id": 1
+    }
+  ]
+}
