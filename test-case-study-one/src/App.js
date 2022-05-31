@@ -1,5 +1,6 @@
 import './App.css';
 import ConditionalRendering from './components/conditionalRendering';
+import ForEachJson from './components/ForEachJson';
 // import LoginPageValidation from './components/LoginPageValidation';
 // import Test from './components/test';
 
@@ -8,7 +9,8 @@ function App() {
     <div className="App">
       {/* <Test />
       <LoginPageValidation /> */}
-      <ConditionalRendering />
+      {/* <ConditionalRendering /> */}
+      <ForEachJson />
     </div>
   );
 }
