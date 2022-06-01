@@ -1,25 +1,91 @@
 {
-  "posts": [
-    {
-      "id": 1,
-      "title": "json-server",
-      "author": "typicode"
-    },
-    {
-      "password": "siva@1998",
-      "name": "sivaraman k",
-      "creditcardno": "4157665174204561",
-      "creditcardmonth": "12",
-      "creditcardyear": "2023",
-      "age": "25",
-      "id": 2
-    }
-  ],
   "userLoginDetails": [
     {
       "user_Id": 25600,
       "password": "siva@1998",
       "id": 1
     }
-  ]
+  ],
+  "cityList": [
+    {
+    "cityId": 1,
+    "cityName": "Bengaluru",
+    "country": "India",
+    "airport": "Kempegowda International Airport",
+    "originCityFlights": null,
+    "destinationCityFlights": null
+    },
+    {
+    "cityId": 2,
+    "cityName": "Delhi",
+    "country": "India",
+    "airport": "Indira Gandhi International Airport",
+    "originCityFlights": null,
+    "destinationCityFlights": null
+    },
+    {
+    "cityId": 3,
+    "cityName": "Kolkata",
+    "country": "India",
+    "airport": "Netaji Subhash Chandra Bose Airport",
+    "originCityFlights": null,
+    "destinationCityFlights": null
+    },
+    {
+    "cityId": 4,
+    "cityName": "Hyderabad",
+    "country": "India",
+    "airport": "Rajiv Gandhi International Airport",
+    "originCityFlights": null,
+    "destinationCityFlights": null
+    },
+    {
+    "cityId": 5,
+    "cityName": "Mumbai",
+    "country": "India",
+    "airport": "Chhatrapati Shivaji Maharaj Airport",
+    "originCityFlights": null,
+    "destinationCityFlights": null
+    },
+    {
+    "cityId": 6,
+    "cityName": "Chennai",
+    "country": "India",
+    "airport": "Chennai International Airport",
+    "originCityFlights": null,
+    "destinationCityFlights": null
+    },
+    {
+    "cityId": 7,
+    "cityName": "Goa",
+    "country": "India",
+    "airport": "Goa International Airport",
+    "originCityFlights": null,
+    "destinationCityFlights": null
+    },
+    {
+    "cityId": 8,
+    "cityName": "Doha",
+    "country": "Qatar",
+    "airport": "Hamad International Airport",
+    "originCityFlights": null,
+    "destinationCityFlights": null
+    },
+    {
+    "cityId": 9,
+    "cityName": "Bangkok",
+    "country": "Thailand",
+    "airport": "Suvarnabhumi Airport",
+    "originCityFlights": null,
+    "destinationCityFlights": null
+    },
+    {
+    "cityId": 10,
+    "cityName": "Mysuru",
+    "country": "India",
+    "airport": "Mysuru Airport",
+    "originCityFlights": null,
+    "destinationCityFlights": null
+    }
+    ]
 }
