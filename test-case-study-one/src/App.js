@@ -11,8 +11,8 @@ function App() {
       {/* <Test />
       <LoginPageValidation /> */}
       {/* <ConditionalRendering /> */}
-      {/* <ForEachJson /> */}
-      <DisplayPassengerDetails />
+      <ForEachJson />
+      {/* <DisplayPassengerDetails /> */}
     </div>
   );
 }
