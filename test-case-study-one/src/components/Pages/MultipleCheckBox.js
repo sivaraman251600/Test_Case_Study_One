@@ -6,28 +6,19 @@ function MultipleCheckBox() {
   useEffect(() => {
     axios
       .get("http://localhost:3005/cityList")
-      .then((res) => setStoreCities(res.data))
+      .then((res) => setStoreCities(res.data.map((city)=>({city:city ,selected:false}))))
       .catch((err) => console.log(err));
   }, []);
 
-  var cityNames = [];
-  for (let cities of storeCities) {
-    cityNames.push(cities.cityName);
-  }
+  
 
-  const [checked, setChecked] = useState(false);
-  let citiesArr = []
-  const checkBoxFunc = (cityname) => {
-    console.log("Calling -----> checkBoxFunc");
-    citiesArr.push(cityname)
-    console.log(citiesArr)
-  };
+  const callingFuncOne = (cityId,checked) => {
+    const cities = storeCities.map((current)=>{ 
+     return current.city.cityId === cityId ? {...current,selected:checked} : {...current}
+    })
+    setStoreCities(cities)
+}
 
-  const removeCheckBoxFunc = (cityname) =>{
-      console.log("Calling ---> removeCheckBoxFunc")
-      citiesArr.some((city)=>city === cityname)
-      console.log(citiesArr)
-  }
   return (
     <div>
       <table>
@@ -35,30 +26,27 @@ function MultipleCheckBox() {
           <tr>
             <th>city Name</th>
           </tr>
-          {cityNames.map((cityname) => (
-            <tr>
-              <td>{cityname}</td>
+          {storeCities.map((cityname) => (
+            <tr key={cityname.city.cityName}>
+              <td>{cityname.city.cityName}</td>
               <td>
                 <input
                   type={"checkbox"}
-                  name="cityname"
-                  onChange={() => {
-                    if (checked) {
-                        setChecked(!checked)
-                        removeCheckBoxFunc(cityname);
-                    } else {
-                        setChecked(!checked)
-                        checkBoxFunc(cityname);
-                    }
-                  }}
+                  checked={cityname.selected}
+                  onChange={(ev)=>callingFuncOne(cityname.city.cityId,ev.currentTarget.checked)}
                 />
               </td>
             </tr>
           ))}
+          <tr>
+            <th>Added City List</th>
+          </tr>
+          {storeCities.filter(value=>value.selected).map((cityname)=><tr key={cityname.city.cityName}><td>{cityname.city.cityName}</td></tr>)}
         </tbody>
       </table>
     </div>
   );
 }
+
 
 export default MultipleCheckBox;
