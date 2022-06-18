@@ -87,5 +87,66 @@
     "originCityFlights": null,
     "destinationCityFlights": null
     }
-    ]
+    ],
+      "updatedBooking": {
+        "referenceId": 10,
+        "user": {
+            "userId": 2,
+            "name": "Lewis",
+            "password": "merc",
+            "creditCardNumber": "1234543212345432",
+            "creditCardType": "C",
+            "creditCardMonth": 9,
+            "creditCardYear": 2025,
+            "age": 36,
+            "bookedFlights": null
+        },
+        "flightAvail": {
+            "flight": {
+                "flightId": "A1",
+                "originCity": {
+                    "cityId": 1,
+                    "cityName": "Bengaluru",
+                    "country": "India",
+                    "airport": "Kempegowda International Airport",
+                    "originCityFlights": null,
+                    "destinationCityFlights": null
+                },
+                "destinationCity": {
+                    "cityId": 2,
+                    "cityName": "Delhi",
+                    "country": "India",
+                    "airport": "Indira Gandhi International Airport",
+                    "originCityFlights": null,
+                    "destinationCityFlights": null
+                },
+                "departureTime": "04:40:00",
+                "arrivalTime": "07:25:00",
+                "availableFlights": null
+            },
+            "flightDate": "2022-06-02",
+            "seats": 178,
+            "cost": 9154.0,
+            "flightBookings": null
+        },
+        "status": "C",
+        "bookedSeats": 2,
+        "totalCost": 18308.0,
+        "passengers": [
+            {
+                "referenceId": 10,
+                "ticketNumber": 9,
+                "passengerName": "Bottas",
+                "age": 34,
+                "status": "C"
+            },
+            {
+                "referenceId": 10,
+                "ticketNumber": 10,
+                "passengerName": "Magnesson",
+                "age": 40,
+                "status": "C"
+            }
+        ]
+    }
 }
