@@ -6,18 +6,22 @@ function MultipleCheckBox() {
   useEffect(() => {
     axios
       .get("http://localhost:3005/cityList")
-      .then((res) => setStoreCities(res.data.map((city)=>({city:city ,selected:false}))))
+      .then((res) =>
+        setStoreCities(
+          res.data.map((city) => ({ city: city, selected: false }))
+        )
+      )
       .catch((err) => console.log(err));
   }, []);
 
-  
-
-  const callingFuncOne = (cityId,checked) => {
-    const cities = storeCities.map((current)=>{ 
-     return current.city.cityId === cityId ? {...current,selected:checked} : {...current}
-    })
-    setStoreCities(cities)
-}
+  const callingFuncOne = (cityId, checked) => {
+    const cities = storeCities.map((current) => {
+      return current.city.cityId === cityId
+        ? { ...current, selected: checked }
+        : { ...current };
+    });
+    setStoreCities(cities);
+  };
 
   return (
     <div>
@@ -33,7 +37,12 @@ function MultipleCheckBox() {
                 <input
                   type={"checkbox"}
                   checked={cityname.selected}
-                  onChange={(ev)=>callingFuncOne(cityname.city.cityId,ev.currentTarget.checked)}
+                  onChange={(ev) =>
+                    callingFuncOne(
+                      cityname.city.cityId,
+                      ev.currentTarget.checked
+                    )
+                  }
                 />
               </td>
             </tr>
@@ -41,12 +50,17 @@ function MultipleCheckBox() {
           <tr>
             <th>Added City List</th>
           </tr>
-          {storeCities.filter(value=>value.selected).map((cityname)=><tr key={cityname.city.cityName}><td>{cityname.city.cityName}</td></tr>)}
+          {storeCities
+            .filter((value) => value.selected)
+            .map((cityname) => (
+              <tr key={cityname.city.cityName}>
+                <td>{cityname.city.cityName}</td>
+              </tr>
+            ))}
         </tbody>
       </table>
     </div>
   );
 }
-
 
 export default MultipleCheckBox;
